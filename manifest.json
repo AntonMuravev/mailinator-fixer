@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+
+  "name": "Fix Mailinator",
+  "description": "This extension allows fix Mailinator error contents with impossibility to show origin message.",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "logo_16.png"
+  },
+
+  "content_scripts": [{
+    "matches": ["https://www.mailinator.com/*"],
+    "js": ["main.js"]
+  }],
+
+  "web_accessible_resources": ["injection.js"]
+}
